@@ -21,6 +21,6 @@ if (above_enemy and (falling or state == player.ledge_grab)) {
 	//Bounce off the enemy
 	yspeed = -(16 / 3)
 	audio_play_sound(a_step, 6, false);
-} else {
+} else if (state != player.hurt and state != player.death) {
 	take_damage();
 }

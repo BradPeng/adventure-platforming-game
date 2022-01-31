@@ -5,12 +5,9 @@ switch (state) {
 	case bat.idle:
 		sprite_index = s_bat_idle;
 		if (instance_exists(o_player)) {
-			
 			var dis = point_distance(x, y, o_player.x, o_player.y);
-			
 			if (dis < sight) {
-	
-
+				y += 4;
 				state = bat.chase;
 			}
 		}
@@ -18,11 +15,11 @@ switch (state) {
 	#endregion
 	#region Bat Chase
 	case bat.chase:
-
+		
 		if (instance_exists(o_player)) {
 			sprite_index = s_bat_fly;
 			var dis = point_distance(x, y, o_player.x, o_player.y);
-			show_debug_message(dis);
+		
 			if (dis > sight) {
 				state = bat.returnToRest;
 			}
@@ -47,10 +44,12 @@ switch (state) {
 			image_xscale = sign(xspeed);
 			xspeed = 0;
 		}
-		yspeed = -max_speed;
+		//yspeed = -max_speed;
 		if (!position_meeting(x, y+yspeed, o_solid)) {
-			y += yspeed;	
+			y += -max_speed;	
 		} else {
-			y--;	
+			while (!position_meeting(x, y, o_solid)) {
+				y--;	
+			}
 		}
 }

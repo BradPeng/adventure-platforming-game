@@ -19,7 +19,7 @@ if (state == player.bow_ground || state == player.bow_air) {
 	state = player.moving;	
 	if (has_shot_arrow == false) {
 			has_shot_arrow = true;	
-			arrow = instance_create_layer(x+10, y + 3, "Player", o_arrow);
+			arrow = instance_create_layer(x + 10*image_xscale, y + 3, "Player", o_arrow);
 			arrow.image_xscale = image_xscale;
 			arrow.xspeed *= image_xscale;
 	}

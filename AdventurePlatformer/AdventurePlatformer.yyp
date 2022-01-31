@@ -47,6 +47,7 @@
     {"id":{"name":"player_bow_air_state","path":"scripts/player_bow_air_state/player_bow_air_state.yy",},"order":11,},
     {"id":{"name":"s_warrior_death","path":"sprites/s_warrior_death/s_warrior_death.yy",},"order":10,},
     {"id":{"name":"s_jumper","path":"sprites/s_jumper/s_jumper.yy",},"order":11,},
+    {"id":{"name":"s_warrior_slide_hitbox","path":"sprites/s_warrior_slide_hitbox/s_warrior_slide_hitbox.yy",},"order":19,},
     {"id":{"name":"take_damage","path":"scripts/take_damage/take_damage.yy",},"order":5,},
     {"id":{"name":"direction_move_bounce","path":"scripts/direction_move_bounce/direction_move_bounce.yy",},"order":7,},
     {"id":{"name":"f_title","path":"fonts/f_title/f_title.yy",},"order":1,},
